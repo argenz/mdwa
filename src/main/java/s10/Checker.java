@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 public class Checker extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final Logger logger = LoggerFactory.getLogger(Checker.class);
+    //si usano solo risorse statiche, se si usano di istanza bisogna fare molta attenzione.
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -31,10 +32,10 @@ public class Checker extends HttpServlet {
                 set.add(Character.toLowerCase(c));
             }
         }
-        request.setAttribute("set", set);
+        request.setAttribute("set", set); //si piazza nella request l'attributo set, per "salvare" il lavoro fatto finora nel codice java
 
-        RequestDispatcher rd = request.getRequestDispatcher("/s10/checker.jsp");
-        rd.forward(request, response);
+        RequestDispatcher rd = request.getRequestDispatcher("/s10/checker.jsp"); //metodo che dice a tomcat di chiamare la risorsa per completare la gestione della request. 
+        rd.forward(request, response); //che gli passa la request. 
     }
 
     @Override

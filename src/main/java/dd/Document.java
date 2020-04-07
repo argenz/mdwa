@@ -1,4 +1,5 @@
 package dd;
+// JavaBean con dentro il JavaBean User
 
 public class Document {
     private String title;

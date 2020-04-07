@@ -24,7 +24,7 @@ public class Fetcher extends HttpServlet {
             throws ServletException, IOException {
         logger.trace("called");
 
-        request.setAttribute("doc", new Document("JSP Cheatsheet", new User("Tom", 42)));
+        request.setAttribute("doc", new Document("JSP Cheatsheet", new User("Tom", 42))); 
 
         RequestDispatcher rd = request.getRequestDispatcher("/s15/fetch.jsp");
         rd.forward(request, response);

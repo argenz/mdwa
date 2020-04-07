@@ -36,12 +36,12 @@ public class Greeter extends HttpServlet {
             duration = Duration.between(start, LocalTime.now());
         }
 
-        if (request.getParameter("done") == null) {
+        if (request.getParameter("done") == null) {   //done è passato come parametro nella request: s11/greeter?done
             request.setAttribute("duration", duration);
             RequestDispatcher rd = request.getRequestDispatcher("/s11/greeter.jsp");
             rd.forward(request, response);
         } else {
-            session.invalidate();
+            session.invalidate();   //sessione corrente non vale più. E' finita, creane una nuova
 
             response.setContentType("text/html");
             response.setCharacterEncoding("utf-8");

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>This JSP expects x or y as parameter</h1>
-    <c:if test="${param.x != null}">
+    <c:if test="${param.x != null}">               <%-- il test è la condizione  --%>
         <p>Parameter x is ${param.x}</p>
     </c:if>
     <c:if test="${param.y != null}">

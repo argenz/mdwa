@@ -21,8 +21,11 @@ public class ContextParam extends HttpServlet {
             throws ServletException, IOException {
         logger.trace("called");
 
-        String admin = this.getServletContext().getInitParameter("admin");
+        String admin = this.getServletContext().getInitParameter("admin");    //ti permette di vedere il contesto della servlet, qundi la webapp in generale.  
         request.setAttribute("admin", admin);
+        
+        String password = this.getServletContext().getInitParameter("password");
+        request.setAttribute("password", password);
 
         RequestDispatcher rd = request.getRequestDispatcher("/s18/contextParam.jsp");
         rd.forward(request, response);

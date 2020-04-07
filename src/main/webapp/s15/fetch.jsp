@@ -8,8 +8,9 @@
 <body>
     <h1>Hello!</h1>
 
-    <p>Document title: ${doc.title}</p>
-    <p>Document user name: ${doc.user.name}</p>
-    <p>Document title by request scope: ${requestScope.doc.title}</p>
+    <p>Document title: ${doc.title}</p>   <!-- sintassi ${ }  quando c'è bisogno di un valore dal controller 
+    										   .title è una proprietà, ma JSP lo trasforma da proprietà a metodo Java .getTitle()-->
+    <p>Document user name: ${doc.user.name}</p> 
+    <p>Document title by request scope: ${requestScope.doc.title}</p> 
 </body>
 </html>

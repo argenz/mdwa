@@ -11,8 +11,8 @@
     <p id="result">
         The user name
         <%
-            @SuppressWarnings("unchecked")
-            Set<Character> set = (Set<Character>) request.getAttribute("set");
+            @SuppressWarnings("unchecked")  //ignora il warning perchè non lo posso risolvere
+            Set<Character> set = (Set<Character>) request.getAttribute("set");    //si riottiene l'attributo set e lo si cast nel 
             if (set == null || set.isEmpty()) {
                 out.print("is empty");
             } else {
