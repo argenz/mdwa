@@ -7,15 +7,10 @@
 <title>JSTL for each</title>
 </head>
 <body>
-    <p>Users:</p>
-    <table>
-    <c:forEach var="user" items="${users}">
-        <tr>
-            <td>${user.name}</td>
-            <td>${user.id}</td>
-        </tr>
+
+    <c:forEach var="user" items="${users}"> <p>${user.name},${user.id}</p>
     </c:forEach>
-    </table>
+
     <hr>
     <p>Values</p>
     <c:forEach var="value" items="${values}" begin="0" end="11" step="3" varStatus="status">

@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
 <body>
-<p> Back to <a href="../index.html">Home</a></p>
+	<p>
+		Back to <a href="../index.html">Home</a>
+	</p>
 
-<h4>
-<i>Welcome to the Webmaster Login Excercise</i>
-</h4>
-<h5>Please enter your user name and password below:</h5>
-<form action="login" method='post'> <!-- si parla di password -->
-	Username: <input name='username' > <br>
-    Password: <input type='password' name='password'> <br>
-	<input type='submit'> 
-</form>
-<br>
+	<h4>
+		<i>Welcome to the Webmaster Login Excercise</i>
+	</h4>
 
-<!--  Aggiungi show password!  -->
-<!--  Aggiungi confronto con dati dell'utente admin in XML  -->
-<!--  
+	<form action="login" method='post'>
+		<!-- si parla di password -->
+		<div class="form-group">
+		<label for="exampleInputEmail1">Username:</label>
+		<input name='username' value = 'francesca' class="form-control" id="exampleInputEmail1" >
+		</div>
+		<br>
+		<div class="form-group">
+		<label for="exampleInputPassword1">Password</label>
+		<input type='password' name='password' value='password' class="form-control" id="exampleCheck1">
+		</div>
+		<br> 
+		<button type='submit' class="btn btn-primary">Submit</button>
+	</form>
+	<br>
+
+	<!--  Aggiungi show password!  -->
+	<!--  Aggiungi confronto con dati dell'utente admin in XML  -->
+	<!--  
 + direttiva include 
 
 form 

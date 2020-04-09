@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<sql:query dataSource="jdbc/me" var="regions">select * from regions</sql:query>
+<sql:query dataSource="jdbc/me" var="regions">select * from regions</sql:query>   <%-- ACCEDE AL DATABASE DIRETTAMENTE DA JSP, INVECE DI SOLITO DI PASSA PER JAVA JDBC --%>
 <title>HR Regions</title>
 </head>
 <body>

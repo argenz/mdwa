@@ -18,7 +18,7 @@ public class DaoRegion implements Closeable {
     private static final Logger logger = LoggerFactory.getLogger(DaoRegion.class);
     private Connection conn;
 
-    public DaoRegion(DataSource ds) {
+    public DaoRegion(DataSource ds) {  
         logger.trace("called");
 
         try {

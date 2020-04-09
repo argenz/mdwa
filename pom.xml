@@ -25,7 +25,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-            <scope>provided</scope>                 <!--  provided, cioè messa a disposizione dall'application server -->
+       <!--  <scope>provided</scope>                 provided, cioè messa a disposizione dall'application server -->
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>

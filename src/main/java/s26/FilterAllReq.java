@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@WebFilter(dispatcherTypes = { DispatcherType.REQUEST }, urlPatterns = { "/*" })
+@WebFilter(dispatcherTypes = { DispatcherType.REQUEST }, urlPatterns = { "/*" }) 					//tutte le url
 public class FilterAllReq implements Filter {
     private static final Logger logger = LoggerFactory.getLogger(FilterAllReq.class);
 
@@ -38,7 +38,7 @@ public class FilterAllReq implements Filter {
             HttpServletRequest hsr = (HttpServletRequest) request;
 
             StringBuffer url = hsr.getRequestURL();
-            String query = hsr.getQueryString();
+            String query = hsr.getQueryString();        //sta modificando la query
             if (query != null) {
                 url.append("?");
                 url.append(query);
